@@ -71,7 +71,7 @@ using TicTacToe.Models;
             <h3>Zarejestruj się ");
             EndContext();
             BeginContext(368, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76fe5a80faf14b7f9c0894333ecebd80", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d25af8e451654c3cb39b4e64aa7fad06", async() => {
                 BeginContext(422, 5, true);
                 WriteLiteral("tutaj");
                 EndContext();
