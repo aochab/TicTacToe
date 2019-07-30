@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Email Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Email Confirmation</h2>
+A message was sent to @ViewBag.Email . Please confirm this address by clicking on the link contained in message.
+
+@section  Scripts
+{
+    <script>
+        $(document).ready(function () {
+            EmailConfirmation('@ViewBag.Email');
+        });
+    </script>
+}

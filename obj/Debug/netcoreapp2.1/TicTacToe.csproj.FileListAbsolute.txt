@@ -31,3 +31,5 @@ F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.dll
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.pdb
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.csproj.CopyComplete
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\UserRegistration\Index.g.cshtml.cs
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\UserRegistration\EmailConfirmation.g.cshtml.cs
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\GameInvitation\Index.g.cshtml.cs
