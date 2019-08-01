@@ -9,10 +9,13 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TicTacToe.Services;
 using TicTacToe.Extensions;
+using System.Globalization;
 
 namespace TicTacToe
 {
@@ -28,6 +31,8 @@ namespace TicTacToe
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalization(options => options.ResourcesPath = "Localization");
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -36,9 +41,18 @@ namespace TicTacToe
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddViewLocalization(
+                LanguageViewLocationExpanderFormat.Suffix,
+                options => options.ResourcesPath = "Localization")
+                .AddDataAnnotationsLocalization();
             services.AddSingleton<IUserService, UserService>();
             services.AddRouting();
+            services.AddSession(o =>
+           {
+               o.IdleTimeout = TimeSpan.FromMinutes(30);
+           });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +73,7 @@ namespace TicTacToe
             app.UseRewriter(options);
 
             app.UseStaticFiles();
+            app.UseSession();
 
             var routeBuilder = new RouteBuilder(app);
             routeBuilder.MapGet("CreateUser", context =>
@@ -84,8 +99,20 @@ namespace TicTacToe
             app.UseCommunicationMiddleware();
             app.UseHttpsRedirection();
 
-            app.UseCookiePolicy();
+            var supportedCultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("en-GB"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            };
 
+            localizationOptions.RequestCultureProviders.Clear();
+            localizationOptions.RequestCultureProviders.Add(new CultureProviderResolverService());
+
+            app.UseRequestLocalization(localizationOptions);
+
+            app.UseCookiePolicy();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

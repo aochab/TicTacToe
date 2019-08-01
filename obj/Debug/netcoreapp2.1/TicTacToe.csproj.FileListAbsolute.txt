@@ -33,3 +33,16 @@ F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.cspro
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\UserRegistration\Index.g.cshtml.cs
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\UserRegistration\EmailConfirmation.g.cshtml.cs
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\GameInvitation\Index.g.cshtml.cs
+F:\Informatyka\.NET Core\Repos\TicTacToe\bin\Debug\netcoreapp2.1\pl\TicTacToe.resources.dll
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Controllers.GameInvitationController.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Controllers.GameInvitationController.pl.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.csproj.GenerateResource.cache
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\pl\TicTacToe.resources.dll
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.Home.Index.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.Home.index.pl.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.UserRegistration.Index.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.UserRegistration.Index.pl.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Models.UserModel.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Models.UserModel.pl.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.Shared._Layout.resources
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Localization.Views.Shared._Layout.pl.resources

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using TicTacToe.Models;
 
 namespace TicTacToe.Controllers
@@ -12,6 +13,10 @@ namespace TicTacToe.Controllers
     {
         public IActionResult Index()
         {
+            //pobiera culture, jezyk z sesji uzytkownika
+            var culture =
+                Request.HttpContext.Session.GetString("culture");
+            ViewBag.Language = culture;
             return View();
         }
 
@@ -38,6 +43,12 @@ namespace TicTacToe.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult SetCulture(string culture)
+        {
+            Request.HttpContext.Session.SetString("culture", culture);
+            return RedirectToAction("Index");
         }
     }
 }
