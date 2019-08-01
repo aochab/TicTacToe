@@ -16,14 +16,16 @@ using Microsoft.Extensions.DependencyInjection;
 using TicTacToe.Services;
 using TicTacToe.Extensions;
 using System.Globalization;
+using TicTacToe.Options;
 
 namespace TicTacToe
 {
     public class Startup
     {
+        public IConfiguration _configuration { get; }
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -38,7 +40,9 @@ namespace TicTacToe
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            })
+                .Configure<EmailServiceOptions>(_configuration.GetSection("Email"));
+            services.AddSingleton<IEmailService, EmailService>();
 
 
             services.AddMvc()
@@ -48,6 +52,7 @@ namespace TicTacToe
                 options => options.ResourcesPath = "Localization")
                 .AddDataAnnotationsLocalization();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IEmailService, EmailService>();
             services.AddRouting();
             services.AddSession(o =>
            {

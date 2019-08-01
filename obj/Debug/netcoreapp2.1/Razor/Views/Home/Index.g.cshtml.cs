@@ -87,7 +87,7 @@ Write(Localizer["Title"]);
             <h3>Zarejestruj się ");
             EndContext();
             BeginContext(400, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50b1b081c4b243b89fb1f52239112d03", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "689ea6a8104b41298a363e34d2dccc23", async() => {
                 BeginContext(454, 5, true);
                 WriteLiteral("tutaj");
                 EndContext();
