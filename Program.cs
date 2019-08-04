@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TicTacToe.Extensions;
 
 namespace TicTacToe
 {
@@ -14,7 +15,6 @@ namespace TicTacToe
     {
         public static void Main(string[] args)
         {
-            //CreateWebHostBuilder(args).Build().Run();
             BuildWebHost(args).Run();
         }
 
@@ -25,6 +25,11 @@ namespace TicTacToe
             .PreferHostingUrls(true)
             .UseUrls("http://localhost:5000")
             //.UseApplicationInsights()
+            .ConfigureLogging((hostingcontext, logging) =>
+            {
+                logging.AddLoggingConfiguration(
+                    hostingcontext.Configuration);
+            })
             .Build();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,11 +39,20 @@ namespace TicTacToe.Middlewares
                                 ct, command.Parameters.ToString());
                             break;
                         }
+                    case "CheckGameInvitationConfirmationStatus":
+                        {
+                            await ProcessGameInvitationConfirmation(context, webSocket,
+                                ct, command.Parameters.ToString());
+                            break;
+                        }
                 }
-            }else if (context.Request.Path.Equals(
-                "/CheckEmailConfirmationStatus"))
+            }else if (context.Request.Path.Equals("/CheckEmailConfirmationStatus"))
             {
                 await ProcessEmailConfirmation(context);
+            }
+            else if (context.Request.Path.Equals("/CheckGameInvitationConfirmationStatus"))
+            {
+                await ProcessGameInvitationConfirmation(context);
             }
             else
             {
@@ -132,5 +142,52 @@ namespace TicTacToe.Middlewares
                 }
             }
         }
+
+        private async Task ProcessGameInvitationConfirmation(HttpContext context)
+        {
+            var id = context.Request.Query["id"];
+            if (string.IsNullOrEmpty(id))
+                await context.Response.WriteAsync("Invalid request: and identifier is required");
+            var gameInvitationService =
+                context.RequestServices.GetService<IGameInvitationService>();
+            var gameInvitationModel =
+                await gameInvitationService.Get(Guid.Parse(id));
+            if (gameInvitationModel.IsConfirmed)
+                await context.Response.WriteAsync(
+                    JsonConvert.SerializeObject(new
+                    {
+                        Result = "OK",
+                        Email = gameInvitationModel.InvitedBy,
+                        gameInvitationModel.EmailTo
+                    }));
+            else
+            {
+                await context.Response.WriteAsync("Waiting for game invitation confirmation");
+            }
+        }
+
+        private async Task ProcessGameInvitationConfirmation(HttpContext context,
+            WebSocket webSocket, CancellationToken ct, string parameters)
+        {
+            var gameInvitationService = context.RequestServices.GetService<IGameInvitationService>();
+            var id = Guid.Parse(parameters);
+            var gameInvitationModel = await gameInvitationService.Get(id);
+            while(!ct.IsCancellationRequested && !webSocket.CloseStatus.HasValue &&
+                gameInvitationModel?.IsConfirmed == false)
+            {
+                await SendStringAsync(webSocket, JsonConvert.SerializeObject(new
+                {
+                    Result = "OK",
+                    Email = gameInvitationModel.InvitedBy,
+                    gameInvitationModel.EmailTo,
+                    gameInvitationModel.Id
+                }), ct);
+            }
+
+            Task.Delay(500).Wait();
+
+            gameInvitationModel = await gameInvitationService.Get(id);
+        }
+             
     }
 }

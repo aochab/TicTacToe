@@ -4,6 +4,66 @@
     "F:\\Informatyka\\.NET Core\\Repos\\TicTacToe\\TicTacToe.csproj": {}
   },
   "projects": {
+    "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj",
+        "projectName": "TicTacToeLogging",
+        "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj",
+        "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+        "outputPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "F:\\Informatyka\\.NET Core\\Repos\\TicTacToe\\TicTacToe.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -29,7 +89,11 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj": {
+                "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -60,6 +124,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.9, )"
+            },
+            "Sendgrid": {
+              "target": "Package",
+              "version": "[9.11.0, )"
             }
           },
           "imports": [

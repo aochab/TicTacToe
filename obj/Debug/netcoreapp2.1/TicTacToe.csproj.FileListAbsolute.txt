@@ -46,3 +46,6 @@ F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.Views
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.dll
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.pdb
 F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.csproj.CopyComplete
+F:\Informatyka\.NET Core\Repos\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToeLogging.dll
+F:\Informatyka\.NET Core\Repos\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToeLogging.pdb
+F:\Informatyka\.NET Core\Repos\TicTacToe\obj\Debug\netcoreapp2.1\Razor\Views\GameInvitation\GameInvitationConfirmation.g.cshtml.cs

@@ -23,41 +23,40 @@ namespace TicTacToe
     public class Startup
     {
         public IConfiguration _configuration { get; }
-        public Startup(IConfiguration configuration)
+        public IHostingEnvironment _hostingEnvironment { get; }
+        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
             _configuration = configuration;
+            _hostingEnvironment = hostingEnvironment;
         }
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureCommonServices(IServiceCollection services)
         {
             services.AddLocalization(options => options.ResourcesPath = "Localization");
-
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            })
-                .Configure<EmailServiceOptions>(_configuration.GetSection("Email"));
-            services.AddSingleton<IEmailService, EmailService>();
-
-
-            services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                .AddViewLocalization(
-                LanguageViewLocationExpanderFormat.Suffix,
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix,
                 options => options.ResourcesPath = "Localization")
                 .AddDataAnnotationsLocalization();
             services.AddSingleton<IUserService, UserService>();
-            services.AddSingleton<IEmailService, EmailService>();
+            services.AddSingleton<IGameInvitationService, GameInvitationService>();
+            services.Configure<EmailServiceOptions>(_configuration.GetSection("Email"));
+            services.AddEmailService(_hostingEnvironment, _configuration);
             services.AddRouting();
             services.AddSession(o =>
-           {
-               o.IdleTimeout = TimeSpan.FromMinutes(30);
-           });
+            {
+                o.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+        }
+
+        public void ConfigureDevelopmentServices(IServiceCollection services)
+        {
+            ConfigureCommonServices(services);
+        }
+        public void ConfigureStagingServices(IServiceCollection services)
+        {
+            ConfigureCommonServices(services);
+        }
+        public void ConfigureProductionServices(IServiceCollection services)
+        {
+            ConfigureCommonServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

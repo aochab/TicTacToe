@@ -1,0 +1,16 @@
+﻿@model TicTacToe.Models.GameInvitationModel
+@{
+    ViewData["Title"] = "GameInvitationConfirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Localizer["User {0} has been invited by you to play the game TicTacToe. Wait for connection", Model.EmailTo]</h1>
+
+@section Scripts {
+<script>
+    $(document).ready(function () {
+        GameInvitationConfirmation('@Model.Id');
+    });
+</script>
+}
+

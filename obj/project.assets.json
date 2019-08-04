@@ -3013,6 +3013,18 @@
           }
         }
       },
+      "Sendgrid/9.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4614,6 +4626,20 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "TicTacToeLogging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "Microsoft.Extensions.Logging.Configuration": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/TicTacToeLogging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicTacToeLogging.dll": {}
         }
       }
     }
@@ -7999,6 +8025,26 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Sendgrid/9.11.0": {
+      "sha512": "I3VdLmsDbqazS5k8OsMAuKvnZz3YruNQxOACfVMDdrM5jjlQE/jOoaNJXcZEG+49TbanCVvOldE56pbKxdiVGA==",
+      "type": "package",
+      "path": "sendgrid/9.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/SendGrid.dll",
+        "lib/net452/SendGrid.pdb",
+        "lib/net452/SendGrid.xml",
+        "lib/netstandard1.3/SendGrid.dll",
+        "lib/netstandard1.3/SendGrid.pdb",
+        "lib/netstandard1.3/SendGrid.xml",
+        "lib/netstandard2.0/SendGrid.dll",
+        "lib/netstandard2.0/SendGrid.pdb",
+        "lib/netstandard2.0/SendGrid.xml",
+        "sendgrid.9.11.0.nupkg.sha512",
+        "sendgrid.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -12524,6 +12570,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "TicTacToeLogging/1.0.0": {
+      "type": "project",
+      "path": "../TicTacToeLogging/TicTacToeLogging.csproj",
+      "msbuildProject": "../TicTacToeLogging/TicTacToeLogging.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12531,7 +12582,9 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
+      "Sendgrid >= 9.11.0",
+      "TicTacToeLogging >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12563,7 +12616,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj": {
+              "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12594,6 +12651,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.1.9, )"
+          },
+          "Sendgrid": {
+            "target": "Package",
+            "version": "[9.11.0, )"
           }
         },
         "imports": [

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using TicTacToe.Models;
 using TicTacToe.Services;
 using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace TicTacToe.Controllers
 {
@@ -31,10 +32,34 @@ namespace TicTacToe.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(GameInvitationModel gameInvitationModel)
+        public IActionResult Index(GameInvitationModel gameInvitationModel,
+            [FromServices]IEmailService emailService)
         {
-            return Content(_stringLocalizer["GameInvitationConfirmationMessage",
-                gameInvitationModel.EmailTo]);
+            var gameInvitationService =
+                Request.HttpContext.RequestServices.GetService <IGameInvitationService>();
+            if (ModelState.IsValid)
+            {
+                emailService.SendEmail(gameInvitationModel.EmailTo,
+                    _stringLocalizer["Invitation to game TicTactoe"],
+                    _stringLocalizer[$"Welcome, {0} invites you to game TicTacTo. To join, click here {1}",
+                    gameInvitationModel.InvitedBy, Url.Action("GameInvitationConfirmation", "GameInvitation", new
+                    {
+                        gameInvitationModel.InvitedBy,
+                        gameInvitationModel.EmailTo
+                    }, Request.Scheme, Request.Host.ToString())]);
+                var invitation = gameInvitationService.Add(gameInvitationModel).Result;
+                return RedirectToAction("GameInvitationConfirmation", new { id = invitation.Id });
+            }
+
+            return View(gameInvitationModel);
+        }
+
+        [HttpGet]
+        public IActionResult GameInvitationConfirmation(Guid id,
+            [FromServices]IGameInvitationService gameInvitationService)
+        {
+            var gameInvitation = gameInvitationService.Get(id).Result;
+            return View(gameInvitation);
         }
     }
 }

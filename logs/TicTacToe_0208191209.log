@@ -1,0 +1,39 @@
+2019-08-02 10:09:03 0 InformationUser profile is available. Using 'C:\Users\Home\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 10:09:04 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/  
+02/08/2019 10:09:04 3 InformationRoute matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicTacToe.Controllers.HomeController (TicTacToe).
+02/08/2019 10:09:04 1 InformationExecuting action method TicTacToe.Controllers.HomeController.Index (TicTacToe) - Validation state: Valid
+02/08/2019 10:09:04 2 InformationExecuted action method TicTacToe.Controllers.HomeController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 106.9633ms.
+02/08/2019 10:09:04 1 InformationExecuting ViewResult, running view Index.
+02/08/2019 10:09:05 4 InformationExecuted ViewResult - view Index executed in 392.3617ms.
+02/08/2019 10:09:05 2 InformationExecuted action TicTacToe.Controllers.HomeController.Index (TicTacToe) in 552.4226ms
+2019-08-02 10:09:05 2 InformationRequest finished in 981.9437ms 200 text/html; charset=utf-8
+2019-08-02 10:09:05 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/css/site.min.css?v=88ckcPm6KGGopSq4FjDTYkuvtxji_WGWj2rsZ6LM5gA  
+2019-08-02 10:09:05 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/js/site.min.js?v=WioGzW0g1dCdQe-CD4-0XA8HHhXh-LPpHiVBZDxYYNU  
+2019-08-02 10:09:05 6 InformationThe file /css/site.min.css was not modified
+2019-08-02 10:09:05 6 InformationThe file /js/site.min.js was not modified
+2019-08-02 10:09:05 2 InformationRequest finished in 23.2837ms 304 text/css
+2019-08-02 10:09:05 2 InformationRequest finished in 14.6671ms 304 application/javascript
+2019-08-02 10:09:30 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/UserRegistration  
+02/08/2019 10:09:30 3 InformationRoute matched with {action = "Index", controller = "UserRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicTacToe.Controllers.UserRegistrationController (TicTacToe).
+02/08/2019 10:09:30 1 InformationExecuting action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) - Validation state: Valid
+02/08/2019 10:09:30 2 InformationExecuted action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5012ms.
+02/08/2019 10:09:30 1 InformationExecuting ViewResult, running view Index.
+02/08/2019 10:09:31 4 InformationExecuted ViewResult - view Index executed in 125.807ms.
+02/08/2019 10:09:31 2 InformationExecuted action TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) in 146.9686ms
+2019-08-02 10:09:31 2 InformationRequest finished in 170.16ms 200 text/html; charset=utf-8
+2019-08-02 10:09:34 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/Home/SetCulture?culture=PL  
+02.08.2019 10:09:34 3 InformationRoute matched with {action = "SetCulture", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SetCulture(System.String) on controller TicTacToe.Controllers.HomeController (TicTacToe).
+02.08.2019 10:09:34 1 InformationExecuting action method TicTacToe.Controllers.HomeController.SetCulture (TicTacToe) - Validation state: Valid
+02.08.2019 10:09:34 2 InformationExecuted action method TicTacToe.Controllers.HomeController.SetCulture (TicTacToe), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 1.3359ms.
+02.08.2019 10:09:34 1 InformationExecuting RedirectResult, redirecting to /.
+02.08.2019 10:09:34 2 InformationExecuted action TicTacToe.Controllers.HomeController.SetCulture (TicTacToe) in 39.8989ms
+2019-08-02 10:09:34 3 InformationSession started; Key:79e102e0-907b-3d7f-b333-bffea677d21f, Id:ec3f0284-f034-d767-469c-dc183f5e1cb4
+2019-08-02 10:09:34 2 InformationRequest finished in 91.6302ms 302 
+2019-08-02 10:09:34 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/  
+02.08.2019 10:09:34 3 InformationRoute matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicTacToe.Controllers.HomeController (TicTacToe).
+02.08.2019 10:09:34 1 InformationExecuting action method TicTacToe.Controllers.HomeController.Index (TicTacToe) - Validation state: Valid
+02.08.2019 10:09:34 2 InformationExecuted action method TicTacToe.Controllers.HomeController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.6327ms.
+02.08.2019 10:09:34 1 InformationExecuting ViewResult, running view Index.
+02.08.2019 10:09:34 4 InformationExecuted ViewResult - view Index executed in 16.4703ms.
+02.08.2019 10:09:34 2 InformationExecuted action TicTacToe.Controllers.HomeController.Index (TicTacToe) in 32.1888ms
+2019-08-02 10:09:34 2 InformationRequest finished in 49.0286ms 200 text/html; charset=utf-8
