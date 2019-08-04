@@ -12594,11 +12594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToe\\TicTacToe.csproj",
+      "projectUniqueName": "F:\\Informatyka\\.NET Core\\Repos\\Tic Tac Toe\\TicTacToe\\TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToe\\TicTacToe.csproj",
+      "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\Tic Tac Toe\\TicTacToe\\TicTacToe.csproj",
       "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToe\\obj\\",
+      "outputPath": "F:\\Informatyka\\.NET Core\\Repos\\Tic Tac Toe\\TicTacToe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12617,8 +12617,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj": {
-              "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\TicTacToeLogging\\TicTacToeLogging.csproj"
+            "F:\\Informatyka\\.NET Core\\Repos\\Tic Tac Toe\\TicTacToeLogging\\TicTacToeLogging.csproj": {
+              "projectPath": "F:\\Informatyka\\.NET Core\\Repos\\Tic Tac Toe\\TicTacToeLogging\\TicTacToeLogging.csproj"
             }
           }
         }

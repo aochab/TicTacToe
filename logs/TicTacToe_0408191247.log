@@ -1,0 +1,99 @@
+2019-08-04 10:47:49 0 InformationUser profile is available. Using 'C:\Users\Home\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-04 10:47:50 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/  
+04/08/2019 10:47:51 3 InformationRoute matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicTacToe.Controllers.HomeController (TicTacToe).
+04/08/2019 10:47:51 1 InformationExecuting action method TicTacToe.Controllers.HomeController.Index (TicTacToe) - Validation state: Valid
+04/08/2019 10:47:51 2 InformationExecuted action method TicTacToe.Controllers.HomeController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 77.7304ms.
+04/08/2019 10:47:51 1 InformationExecuting ViewResult, running view Index.
+04/08/2019 10:47:51 4 InformationExecuted ViewResult - view Index executed in 271.9839ms.
+04/08/2019 10:47:51 2 InformationExecuted action TicTacToe.Controllers.HomeController.Index (TicTacToe) in 395.2133ms
+2019-08-04 10:47:51 2 InformationRequest finished in 881.5215ms 200 text/html; charset=utf-8
+2019-08-04 10:47:51 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/css/site.min.css?v=88ckcPm6KGGopSq4FjDTYkuvtxji_WGWj2rsZ6LM5gA  
+2019-08-04 10:47:51 6 InformationThe file /css/site.min.css was not modified
+2019-08-04 10:47:51 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/js/site.min.js?v=WioGzW0g1dCdQe-CD4-0XA8HHhXh-LPpHiVBZDxYYNU  
+2019-08-04 10:47:51 2 InformationRequest finished in 20.4149ms 304 text/css
+2019-08-04 10:47:51 6 InformationThe file /js/site.min.js was not modified
+2019-08-04 10:47:51 2 InformationRequest finished in 12.5507ms 304 application/javascript
+2019-08-04 10:48:03 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/UserRegistration  
+04/08/2019 10:48:03 3 InformationRoute matched with {action = "Index", controller = "UserRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicTacToe.Controllers.UserRegistrationController (TicTacToe).
+04/08/2019 10:48:03 1 InformationExecuting action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:03 2 InformationExecuted action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4392ms.
+04/08/2019 10:48:03 1 InformationExecuting ViewResult, running view Index.
+04/08/2019 10:48:03 4 InformationExecuted ViewResult - view Index executed in 93.9958ms.
+04/08/2019 10:48:03 2 InformationExecuted action TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) in 111.2698ms
+2019-08-04 10:48:03 2 InformationRequest finished in 134.0393ms 200 text/html; charset=utf-8
+2019-08-04 10:48:07 1 InformationRequest starting HTTP/1.1 POST http://localhost:44315/UserRegistration application/x-www-form-urlencoded 256
+04/08/2019 10:48:07 3 InformationRoute matched with {action = "Index", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(TicTacToe.Models.UserModel) on controller TicTacToe.Controllers.UserRegistrationController (TicTacToe).
+04/08/2019 10:48:07 1 InformationExecuting action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:07 2 InformationExecuted action method TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 6.0826ms.
+04/08/2019 10:48:07 1 InformationExecuting RedirectResult, redirecting to /UserRegistration/EmailConfirmation?Email=ochabadrian1@gmail.com.
+04/08/2019 10:48:07 2 InformationExecuted action TicTacToe.Controllers.UserRegistrationController.Index (TicTacToe) in 73.2822ms
+2019-08-04 10:48:07 2 InformationRequest finished in 112.815ms 302 
+2019-08-04 10:48:07 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/UserRegistration/EmailConfirmation?Email=ochabadrian1@gmail.com  
+2019-08-04 10:48:07 1 WarningCultureProviderResolverService returned the following unsupported cultures ''.
+2019-08-04 10:48:07 2 WarningCultureProviderResolverService returned the following unsupported UI Cultures ''.
+04/08/2019 10:48:07 3 InformationRoute matched with {action = "EmailConfirmation", controller = "UserRegistration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EmailConfirmation(System.String) on controller TicTacToe.Controllers.UserRegistrationController (TicTacToe).
+04/08/2019 10:48:07 1 InformationExecuting action method TicTacToe.Controllers.UserRegistrationController.EmailConfirmation (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:07 0 Information##Start## E-mail confirmation process ochabadrian1@gmail.com
+04/08/2019 10:48:07 0 Information##Start sendEmail method## Start sending email to ochabadrian1@gmail.com
+04/08/2019 10:48:09 0 ErrorCan't send an e-mail System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: Nie można nawiązać połączenia, ponieważ komputer docelowy aktywnie go odmawia 127.0.0.1:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(IPEndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at System.Net.Mail.SmtpConnection.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpTransport.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at TicTacToe.Services.EmailService.SendEmail(String emailtTo, String subject, String message) in F:\Informatyka\.NET Core\Repos\Tic Tac Toe\TicTacToe\Services\EmailService.cs:line 42
+04/08/2019 10:48:09 2 InformationExecuted action method TicTacToe.Controllers.UserRegistrationController.EmailConfirmation (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2202.2761ms.
+04/08/2019 10:48:09 1 InformationExecuting ViewResult, running view EmailConfirmation.
+04/08/2019 10:48:09 4 InformationExecuted ViewResult - view EmailConfirmation executed in 20.18ms.
+04/08/2019 10:48:09 2 InformationExecuted action TicTacToe.Controllers.UserRegistrationController.EmailConfirmation (TicTacToe) in 2235.1781ms
+2019-08-04 10:48:09 2 InformationRequest finished in 2270.1255ms 200 text/html; charset=utf-8
+2019-08-04 10:48:12 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/CheckEmailConfirmationStatus  
+2019-08-04 10:48:12 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/GameInvitation?email=ochabadrian1@gmail.com  
+2019-08-04 10:48:12 1 WarningCultureProviderResolverService returned the following unsupported cultures ''.
+2019-08-04 10:48:12 2 WarningCultureProviderResolverService returned the following unsupported UI Cultures ''.
+04/08/2019 10:48:12 3 InformationRoute matched with {action = "Index", controller = "GameInvitation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller TicTacToe.Controllers.GameInvitationController (TicTacToe).
+04/08/2019 10:48:12 1 InformationExecuting action method TicTacToe.Controllers.GameInvitationController.Index (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:12 2 InformationExecuted action method TicTacToe.Controllers.GameInvitationController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.304ms.
+04/08/2019 10:48:12 1 InformationExecuting ViewResult, running view Index.
+04/08/2019 10:48:12 4 InformationExecuted ViewResult - view Index executed in 21.6914ms.
+04/08/2019 10:48:12 2 InformationExecuted action TicTacToe.Controllers.GameInvitationController.Index (TicTacToe) in 37.6694ms
+2019-08-04 10:48:12 3 InformationSession started; Key:96013fe1-d320-db7d-e5d5-706e47e3fcfd, Id:4740fb27-5dfa-78d9-d4ed-f6b54f9ccb7f
+2019-08-04 10:48:12 2 InformationRequest finished in 68.5326ms 200 text/html; charset=utf-8
+2019-08-04 10:48:12 2 InformationRequest finished in 742.585ms 101 
+2019-08-04 10:48:15 1 InformationRequest starting HTTP/1.1 POST http://localhost:44315/GameInvitation application/x-www-form-urlencoded 209
+04/08/2019 10:48:15 3 InformationRoute matched with {action = "Index", controller = "GameInvitation"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index(TicTacToe.Models.GameInvitationModel, TicTacToe.Services.IEmailService) on controller TicTacToe.Controllers.GameInvitationController (TicTacToe).
+04/08/2019 10:48:15 1 InformationExecuting action method TicTacToe.Controllers.GameInvitationController.Index (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:15 0 Information##Start sendEmail method## Start sending email to regina@gmail.com
+04/08/2019 10:48:17 0 ErrorCan't send an e-mail System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: Nie można nawiązać połączenia, ponieważ komputer docelowy aktywnie go odmawia 127.0.0.1:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(IPEndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at System.Net.Mail.SmtpConnection.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpTransport.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at TicTacToe.Services.EmailService.SendEmail(String emailtTo, String subject, String message) in F:\Informatyka\.NET Core\Repos\Tic Tac Toe\TicTacToe\Services\EmailService.cs:line 42
+04/08/2019 10:48:17 2 InformationExecuted action method TicTacToe.Controllers.GameInvitationController.Index (TicTacToe), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 2030.5399ms.
+04/08/2019 10:48:17 1 InformationExecuting RedirectResult, redirecting to /GameInvitation/GameInvitationConfirmation/890db286-14b6-4e1a-85ae-b0d0cad419ad.
+04/08/2019 10:48:17 2 InformationExecuted action TicTacToe.Controllers.GameInvitationController.Index (TicTacToe) in 2046.6016ms
+2019-08-04 10:48:17 2 InformationRequest finished in 2064.1832ms 302 
+2019-08-04 10:48:17 1 InformationRequest starting HTTP/1.1 GET http://localhost:44315/GameInvitation/GameInvitationConfirmation/890db286-14b6-4e1a-85ae-b0d0cad419ad  
+04/08/2019 10:48:17 3 InformationRoute matched with {action = "GameInvitationConfirmation", controller = "GameInvitation"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GameInvitationConfirmation(System.Guid, TicTacToe.Services.IGameInvitationService) on controller TicTacToe.Controllers.GameInvitationController (TicTacToe).
+04/08/2019 10:48:17 1 InformationExecuting action method TicTacToe.Controllers.GameInvitationController.GameInvitationConfirmation (TicTacToe) - Validation state: Valid
+04/08/2019 10:48:17 2 InformationExecuted action method TicTacToe.Controllers.GameInvitationController.GameInvitationConfirmation (TicTacToe), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.0994ms.
+04/08/2019 10:48:17 1 InformationExecuting ViewResult, running view GameInvitationConfirmation.
+04/08/2019 10:48:17 4 InformationExecuted ViewResult - view GameInvitationConfirmation executed in 12.22ms.
+04/08/2019 10:48:17 2 InformationExecuted action TicTacToe.Controllers.GameInvitationController.GameInvitationConfirmation (TicTacToe) in 68.481ms
+2019-08-04 10:48:17 2 InformationRequest finished in 84.5446ms 200 text/html; charset=utf-8
